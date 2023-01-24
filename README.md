@@ -4,7 +4,7 @@
 
 I wanted to create some voice files for a tabletop RPG I was running. I tried various apps and services, but they were either expensive or prohibitive in their usage and all I wanted was some MP3s.
 
-I found Amazon Polly, tried it via the AWS interface and it seemed ideal.  So I wrote this app which is built in Swift, SwiftUI and uses the AWS Swift SDK that is currently in development. I knocked it up in an evening, so it's pretty rough and some bits might feel unfinished.
+I found Amazon Polly, tried it via the AWS interface and it seemed ideal.  So I wrote this app which is built in Swift, SwiftUI and uses the [AWS Swift SDK](https://github.com/awslabs/aws-sdk-swift) that is currently in development. I knocked it up in an evening, so it's pretty rough and some bits might feel unfinished.
 
 I welcome contributions if anyone wants to change or add anything.  Simply open a PR from your fork or open an issue and let's chat about it first.
 
@@ -22,7 +22,7 @@ The app will crash as you will be missing some config.
 ### Running Instructions
 
 * Take a look at the console. It will show the path to the config it is expecting to find.
-* Create a JSON file at that location with this format"
+* Create a JSON file at that location with this format:
 
 ```
 {
@@ -50,10 +50,10 @@ If all is well you will be presented with the UI:
 
 * Give it a title - this will be the title of the MP3 and will not be included in the voice file.
 * Type or paste your text.  This will be sent to the Polly service to create your voice file.  
-* Choose a voice. Polly supports lots of voices, but I chose a subset of English voices, because I was only using English. If you choose a voice for a language and then paste the wrong language, Polly rejects the text, so only English is supported right now.
+* Choose a voice. Polly supports lots of voices, but I chose a subset of English voices, because I was only using English. If you choose a voice and then send text for the wrong language, Polly rejects the text, so only English is supported right now.
 * Click the "Create Speech" button and the UI will send the text to Polly, download the MP3 to the folder, and then close the UI.
 
-![The text entry view of Parakeet](docs/ui3.png "MP3s shown in the UI")
+![MP3s shown in the UI](docs/ui3.png "MP3s shown in the UI")
 
 * Any MP3s in the UI can be played from there directly, just click the "Play" button on the right. 
 * You can drag in a playing file's name area to seek to various parts of the MP3.
@@ -62,5 +62,5 @@ If all is well you will be presented with the UI:
 
 ### License
 
-Everything here in the public domain, so what you want with it.  If you use it for something, please let me know, but you don't have to.
+Everything here is in the public domain, so do what you want with it.  If you use it for something, please let me know, but you don't have to.
 
